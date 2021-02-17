@@ -105,6 +105,30 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+
+//   let word = /[A-Z]\w*/i; 
+// let newWord = str.match(word); 
+// if (newWord === null){
+// return [];
+// }else{
+//  return newWord;
+// }
+
+var reg = /[A-Z]\w*/g;
+  if(str !== ""){
+    var word = str.match(reg);
+     if(word ===null){
+      return [];
+     }
+     else{
+      return word;
+    }
+    }
+    else{
+      return [];
+    }
+
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,6 +139,16 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  var reg = /^[A-Ja-j]/i;
+  var newArr = [];
+  arr.forEach((city)=>{
+    if(reg.test(city)){
+     newArr.push(city);
+    }
+  });
+  return newArr;
+ 
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -245,6 +279,8 @@ describe('Testing challenge 5', () => {
     expect(isCapitalized('these words are all failures')).toStrictEqual([]);
   });
 });
+
+
 
 describe('Testing challenge 6', () => {
   let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
