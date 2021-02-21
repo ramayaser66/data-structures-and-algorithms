@@ -10,6 +10,7 @@ Write a function named sortByChildren that sorts the characters below by the num
 
 ------------------------------------------------------------------------------------------------ */
 let characters = [
+
   {
     name: 'Eddard',
     spouse: 'Catelyn',
@@ -129,7 +130,12 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
-
+  let array = []; 
+ Object.keys(obj).forEach(( element, index) => {
+array.push( Object.keys(obj)[index] +": "+ Object.values(obj)[index] );
+   
+ });
+return array; 
 };
 
 
@@ -139,12 +145,18 @@ CHALLENGE 5
 
 Write a function named getHouses that returns a new array containing the names of all of the houses in the data set.
 ------------------------------------------------------------------------------------------------ */
-
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  return houses;
+
+for(let i =0; i < arr.length; i++ ){
+  houses.push(arr[i].house);
+}
+return houses;
+
+  
 };
+
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -160,6 +172,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  for (let index = 0; index < arr.length; index++) {
+
+    if(Object.values(arr[index])[0] === character){
+      return true;
+    }
+
+  }
+   return false;
 
 };
 
