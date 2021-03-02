@@ -8,11 +8,19 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
 // Solution code here...
+if(arr.length===0){
+  return -1;
+}
+var lgth = 0;
+var longest;
 
-return arr.reduce(function (a, b) {  
-  return a.length > b.length ? a : b;  
-});
-
+for (var i = 0; i < arr.length; i++) {
+  if (arr[i].length > lgth) {
+    var lgth = arr[i].length;
+    longest = i;
+  }
+}
+return longest;
 };
   
 /* ------------------------------------------------------------------------------------------------
@@ -41,18 +49,37 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+   return arr.filter(element =>{
+    if( element.includes(":)")){
+      return element;
+
+    }
+  
+  }); 
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named standardizePhoneNumbers that takes in an array of phone number strings in (XXX) XXX-XXXX format and returns an array with the phone number strings in XXXXXXXXXX format.
+Write a function named standardizePhoneNumbers that takes in an array of phone number strings in" ("XXX) XXX-XXXX format and returns an array with the phone number strings in XXXXXXXXXX format.
 
 For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+
+  let phone = [];
+  arr.forEach(element=>{
+    let x = element.replace('(','');
+    let y = x.replace(')','');
+    let z = y.replace(' ','');
+    let c = z.replace('-','');
+    phone.push(c);
+
+  })
+return phone;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,6 +92,16 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+let OddArray =''; 
+let strArray = str.split(''); 
+strArray.forEach((element, index) =>{
+    if(index%2 !==0){
+      OddArray+= element;
+
+    }
+
+  })
+  return OddArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,6 +112,16 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let bol =true; 
+  arr.forEach(element =>{
+  
+    if(!element.includes(":)")){
+      bol =false;
+     
+    }
+  })
+
+  return bol;
 };
 
 /* ------------------------------------------------------------------------------------------------
