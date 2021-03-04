@@ -11,9 +11,10 @@ E.g. [4,2,7,5,9,2] -> 9
 const maxInArray = (arr) => {
   // Solution code here...
   return arr.reduce((a,b)=>{
-   let compare = a > b ? a : b;
-   return compare;
-  })
+    let compare = a > b ? a : b;
+    return compare;
+   });
+ 
 
 };
 
@@ -29,20 +30,19 @@ For example:
   [23, 5, 5]
 ]
 
-
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
   let numbers = matrix.map(arr=>{
-   return arr.reduce((a,b)=>{
-      return (a>b) ? a : b;
-    },0);
-  });
-return numbers.reduce((a,b)=>{
-  return (b > a) ? b : a; 
-},0);
-
+    return arr.reduce((a,b)=>{
+       return (a>b) ? a : b;
+     },0);
+   });
+ return numbers.reduce((a,b)=>{
+   return (b > a) ? b : a; 
+ },0);
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,6 +62,7 @@ return: 35
 const totalSum = (matrix) => {
   // Solution code here...
 
+  
   let summation = matrix.map((arr)=>{
     let sumOne = arr.reduce((a,b)=>{
       return a+b;
@@ -77,8 +78,6 @@ return result;
 };
 
 
-
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -90,7 +89,6 @@ For this example, the total at 9:00 a.m. is 17 + 26 + 7 + 5 + 33, or 88 total co
 
 Return the array of the total number of cookies sold per hour for all of the stores combined.
 ------------------------------------------------------------------------------------------------ */
-
 
 const hoursOpen = ['9 a.m.', '10 a.m.', '11 a.m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.', '8 p.m.'];
 
@@ -104,28 +102,16 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  var arr = [0,0,0,0,0,0,0,0,0,0,0,0];
 
-//   var arr = [0,0,0,0,0,0,0,0,0,0,0,0];
-
-//    stores.forEach((element,i) => {
-//     element.forEach((item,index)=>{
-//     arr.push(arr[i]= item[index][i]);
-
-//     });
-   
-//   });
-// return arr;
-
-
-var arr = [0,0,0,0,0,0,0,0,0,0,0,0];
-
-for(let i=0;i<hoursOpen.length; i++){
-  for (let j =0; j<stores.length;j++){
-      arr[i] += stores[j][i];
+  for(let i=0;i<hoursOpen.length; i++){
+    for (let j =0; j<stores.length;j++){
+        arr[i] += stores[j][i];
+    }
+    
   }
+  return arr;
   
-}
-return arr;
 
 
 };
@@ -142,7 +128,6 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
-
   var results = [];
  
   
@@ -157,8 +142,10 @@ const salesData = (hours, data) => {
   });
 return results;
 
-};
 
+
+
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -194,6 +181,8 @@ const howManyTreats = (arr) => {
     
   });
   return treatNumb;
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
