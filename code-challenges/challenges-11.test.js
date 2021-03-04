@@ -13,8 +13,8 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
-  let result =  people.map(item=>{
-    return item.firstName+ ' ' + item.lastName;
+  let result = people.map(item => {
+    return item.firstName + ' ' + item.lastName;
   });
   return result;
 
@@ -31,9 +31,9 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 const validatePin = (pin) => {
   // Solution code here...
   let regExp = /\b\d{4}\b/g;
-  if(regExp.test(pin)){
+  if (regExp.test(pin)) {
     return true;
-  }else{
+  } else {
     return false;
   }
 
@@ -47,10 +47,8 @@ Write a function named validateWord that uses a regular expression pattern to va
 If the word is between 5 and 10 characters long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
-  // Solution code here...
 
-  const validateWord = (word) => (word.toString().match(/^[a-z]{5,10}$/i)) ? true : false;
-
+const validateWord = (word) => (word.toString().match(/^[a-z]{5,10}$/i)) ? true : false;
 
 
 
@@ -64,6 +62,9 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
+  let regExp = /[a-z]+[0-9]+.*/i;
+  return (regExp.test(string)) ? true : false;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,6 +85,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  let regExp = /^(\w+|\w+).\w+@\w+\.(com|net|org)$/g;
+  return regExp.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,6 +112,9 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  let regExp = /^((\(\d{3}\))|\d{3})-?\s?\d{3}-?\s?\d{4}$/;
+  let phoneNum = regExp.test(phoneNumber);
+  return phoneNum;
 };
 
 /* ------------------------------------------------------------------------------------------------
