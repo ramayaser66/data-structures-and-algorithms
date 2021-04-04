@@ -13,3 +13,17 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 ### 401 Data Structures, Code Challenges
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+
+
+# Reverse an Array
+dealing with arrays using Java language 
+
+## Challenge
+the challenge required to write a function that takes in an array and reverse it so that the last index is the first and so on.
+
+## Approach & Efficiency
+ I used a simple for loop to reverse the values of each index starting from the last to first. 
+
+## Solution
+![](/assets/whitebored1.PNG)
