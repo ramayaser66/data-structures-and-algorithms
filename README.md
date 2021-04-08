@@ -15,6 +15,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
 
+__________________________________________________________________________________
 
 # Reverse an Array
 dealing with arrays using Java language 
@@ -42,3 +43,30 @@ dealing with arrays using java language
 
 ## Solution
 ![](/assets/lab-3whitebored.PNG)
+
+_________________________________________________________________________________
+
+# Singly Linked List
+Dealing with linkedLists 
+
+## Challenge
+Create
+- a Node class 
+that has a value and a pointer
+- LinkedList class 
+that has a head property
+a method called `insert`, which takes any value as an argument and adds a new node with that value to the head of the list 
+a method called` includes`,  takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+ a method called `toString`, takes in no arguments and returns a string representing all the values in the Linked List 
+
+
+## Approach & Efficiency
+looping over the list, checking if it is empty of not.
+if empty add the new added value to the head and so on. 
+
+the big O here is of type O(N)
+
+## API
+a method called `insert`, which takes any value as an argument and adds a new node with that value to the head of the list 
+a method called` includes`,  takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+ a method called `toString`, takes in no arguments and returns a string representing all the values in the Linked List 
