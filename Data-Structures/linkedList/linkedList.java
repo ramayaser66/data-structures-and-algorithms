@@ -9,9 +9,6 @@ public class linkedList {
 
     public linkedList(){
         head = null;
-
-
-
     }
 
 
@@ -32,8 +29,86 @@ public class linkedList {
         }catch(Exception ex){
             System.out.println("an error occurred in inserting into function....");
         }
+    }
+
+
+    // challenge 6
+
+    // append function
+
+    public void append (int newNodeValue){
+        node newNode = new node(newNodeValue);
+        if(head == null){
+            head = newNode;
+
+        }else {
+            node pointer = head;
+            System.out.println(pointer.getNext());
+            while(pointer.getNext()!= null){
+                pointer = pointer.getNext();
+
+            }
+            pointer.setNext(newNode);
+        }
+    }
+
+    // insertBefore function
+
+    public void insertBefore(int value, int newValue){
+        node newNode = new node(newValue);
+        node pointer = head;
+
+        if(includes(value)){
+            if (pointer.getValue() == value){
+                newNode.setNext(pointer);
+                head = newNode;
+            }else {
+
+                while(pointer.getNext().getValue() != value){
+                    pointer =pointer.getNext();
+                }
+
+                newNode.setNext(pointer.getNext());
+                pointer.setNext(newNode);
+            }
+
+
+        }else{
+            throw new NullPointerException("the value is not included in the linked list");
+
+        }
 
     }
+
+
+    // insertAfte function
+
+    public void insertAfter(int value, int newValue){
+        node newNode = new node(newValue);
+        node pointer = head;
+
+        if (includes(value)) {
+
+            while (pointer.getValue() != value) {
+                pointer = pointer.getNext();
+            }
+
+            newNode.setNext(pointer.getNext());
+            pointer.setNext(newNode);
+
+
+        }else{
+            throw new NullPointerException("the value is not included in the linked list");
+        }
+
+
+
+
+
+    }
+
+
+
 
 
 
@@ -89,8 +164,6 @@ try {
             return false;
         }
     }
-
-
 
 
 }

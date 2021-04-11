@@ -8,7 +8,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testToString() {
+    @Test
+    public void testToString() {
 
         linkedList test = new linkedList();
 
@@ -19,7 +20,8 @@ public class AppTest {
 
     }
 
-    @Test public void testInsert(){
+    @Test
+    public void testInsert() {
         linkedList test = new linkedList();
         test.insert(5);
 
@@ -29,7 +31,8 @@ public class AppTest {
 
     }
 
-    @Test public void testincludes(){
+    @Test
+    public void testincludes() {
 
         linkedList test = new linkedList();
         test.insert(5);
@@ -37,6 +40,58 @@ public class AppTest {
         assertTrue("an error occurred testing the include function...", test.includes(5));
 
 
+    }
+
+    @Test
+    public void testappend() {
+        linkedList test = new linkedList();
+        linkedList test2 = new linkedList();
+        test.insert(5);
+        test.append(24);
+
+
+
+        test2.insert(5);
+        test2.append(24);
+        test2.append(10);
+
+         String expected = "{5}->{24}->null";
+         String expected2 = "{5}->{24}->{10}->null";
+
+         assertEquals("an error occurred testing the append function...", expected, test.toString());
+        assertEquals("an error occurred testing the append function...", expected2, test2.toString());
+
+    }
+
+
+    @Test public void testInsertBefore(){
+        linkedList test = new linkedList();
+
+        test.insert(5);
+        test.insert(8);
+
+    test.insertBefore(8, 9);
+
+    String expected = "{9}->{8}->{5}->null";
+
+    assertEquals("an error occurred testing the insertBefore function...", expected, test.toString());
+
+
+    }
+
+
+
+    @Test public void testInsertAfter() {
+        linkedList test = new linkedList();
+
+        test.insert(5);
+        test.insert(8);
+
+        test.insertAfter(5, 10);
+
+        String expected = "{8}->{5}->{10}->null";
+
+        assertEquals("an error occurred testing the insertAfter function...", expected, test.toString());
 
     }
 

@@ -70,3 +70,34 @@ the big O here is of type O(N)
 a method called `insert`, which takes any value as an argument and adds a new node with that value to the head of the list 
 a method called` includes`,  takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
  a method called `toString`, takes in no arguments and returns a string representing all the values in the Linked List 
+
+ > challenge 6 
+
+ # Challenge Summary
+ continuation of the linkedList.
+
+
+ ## Challenge Description
+ add on the: 
+
+- LinkedList class 
+that has a head property
+a method called `append`, which takes a value as an argument and adds a new node with that value to the last node of the list 
+a method called` insertBefore`,  takes in a value and a new value as arguments and compares the value with the nodes of the linkedList (use the include method to test if the value exists in the linkedList or not if it dose add the new value before the node that matches the value if not throw an exception)
+
+ a method called `insertAfter`, takes in two arguments a value and a new value and compares the value with the nodes of the linkedList (use the include method to test if the value exists in the linkedList or not,  if it dose add the new value after the node that matches the value if not throw an exception)
+  returns a string representing all the values in the Linked List 
+
+
+## Approach & Efficiency
+the big O here is of type O(N)
+we are gonna loop over the linkedList and each time implement the function based on the condition 
+
+
+## Solution
+
+![](/assets/challenge-6A.PNG)
+![](/assets/challenge-6B.PNG)
+![](/assets/challenge-6C.PNG)
+
+
