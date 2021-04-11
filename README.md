@@ -15,6 +15,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
 
+__________________________________________________________________________________
 
 # Reverse an Array
 dealing with arrays using Java language 
@@ -28,22 +29,75 @@ the challenge required to write a function that takes in an array and reverse it
 ## Solution
 ![](/assets/whitebored1.PNG)
 
-_______________________________________________________________________________
 
-# Challenge Summary
-dealing with arrays and inserting values in them  using Java language 
+______________________________________
 
-## Challenge Description
-write a function that takes in an array and a value.
-add the value to the array, return an array with the new value added at the middle index.
+# binarySearch array 
+dealing with arrays using java language
+
+## Challenge
+ write a function that takes in an array and an integer and return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
 
 ## Approach & Efficiency
-i created a new array with a length greater that the input array by one, 
-the looped over the, input array and assigned its values to the new array.
- created another for loop that starts from the last index of the new array and looped until it reached the middle point. in each iteration i assigned the pervious value in the next index.
- finally I set the middle point to equal the input value. 
- 
- 
+ i used the binarySearch approach where i divided the array by half multiple times and search for the integer 
 
 ## Solution
-![](/assets/shiftarray.PNG)
+![](/assets/lab-3whitebored.PNG)
+
+_________________________________________________________________________________
+
+# Singly Linked List
+Dealing with linkedLists 
+
+## Challenge
+Create
+- a Node class 
+that has a value and a pointer
+- LinkedList class 
+that has a head property
+a method called `insert`, which takes any value as an argument and adds a new node with that value to the head of the list 
+a method called` includes`,  takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+ a method called `toString`, takes in no arguments and returns a string representing all the values in the Linked List 
+
+
+## Approach & Efficiency
+looping over the list, checking if it is empty of not.
+if empty add the new added value to the head and so on. 
+
+the big O here is of type O(N)
+
+## API
+a method called `insert`, which takes any value as an argument and adds a new node with that value to the head of the list 
+a method called` includes`,  takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+ a method called `toString`, takes in no arguments and returns a string representing all the values in the Linked List 
+
+ > challenge 6 
+
+ # Challenge Summary
+ continuation of the linkedList.
+
+
+ ## Challenge Description
+ add on the: 
+
+- LinkedList class 
+that has a head property
+a method called `append`, which takes a value as an argument and adds a new node with that value to the last node of the list 
+a method called` insertBefore`,  takes in a value and a new value as arguments and compares the value with the nodes of the linkedList (use the include method to test if the value exists in the linkedList or not if it dose add the new value before the node that matches the value if not throw an exception)
+
+ a method called `insertAfter`, takes in two arguments a value and a new value and compares the value with the nodes of the linkedList (use the include method to test if the value exists in the linkedList or not,  if it dose add the new value after the node that matches the value if not throw an exception)
+  returns a string representing all the values in the Linked List 
+
+
+## Approach & Efficiency
+the big O here is of type O(N)
+we are gonna loop over the linkedList and each time implement the function based on the condition 
+
+
+## Solution
+
+![](/assets/challenge-6A.PNG)
+![](/assets/challenge-6B.PNG)
+![](/assets/challenge-6C.PNG)
+
+
