@@ -166,4 +166,35 @@ try {
     }
 
 
+   
+    // challenge-7: k-th value of the end of the linkedList
+
+    // k-th value function
+
+    public String kthValue(int k) {
+        node pointer = head;
+        int index = 0;
+        int result;
+
+        while (pointer != null) {
+            pointer = pointer.getNext();
+            index++;
+        }
+
+        if (index >= k && k>=0) {
+            pointer = head;
+            for (int i = 0; i < index - k - 1; i++) {
+                pointer = pointer.getNext();
+            }
+
+            return pointer.getValue()+"";
+
+        }else{
+            return "an error occurred .... invalid k value";
+        }
+
+    }
+
+
+
 }

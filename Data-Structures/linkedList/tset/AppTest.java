@@ -95,6 +95,69 @@ public class AppTest {
 
     }
 
+    @Test public void testKthValue(){
+        linkedList test = new linkedList();
+
+        test.insert(5);
+        test.insert(8);
+        test.insert(1);
+
+        test.kthValue(0);
+
+        String expected = "5";
+
+        assertEquals("an error occurred .... invalid k value", expected, test.kthValue(0));
+
+
+    }
+
+
+    @Test public void testKthValueNegativeK(){
+        linkedList test = new linkedList();
+
+        test.insert(5);
+        test.insert(8);
+        test.insert(1);
+
+        test.kthValue(0);
+
+        String expected = "an error occurred .... invalid k value";
+
+        assertEquals("an error occurred .... invalid k value", expected, test.kthValue(-1));
+
+
+    }
+
+    @Test public void testKthValueBiggerK(){
+        linkedList test = new linkedList();
+
+        test.insert(5);
+        test.insert(8);
+        test.insert(1);
+
+        test.kthValue(4);
+
+        String expected = "an error occurred .... invalid k value";
+
+        assertEquals("an error occurred .... invalid k value", expected, test.kthValue(-1));
+
+    }
+
+    @Test public void testKthValueOfSizeOne(){
+        linkedList test = new linkedList();
+
+        test.insert(5);
+        test.insert(8);
+        test.insert(1);
+
+        test.kthValue(3);
+
+        String expected = "5";
+
+        assertEquals("an error occurred .... invalid k value", expected, test.kthValue(0));
+
+    }
+
 
 
 }
