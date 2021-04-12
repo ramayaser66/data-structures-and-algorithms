@@ -101,3 +101,32 @@ we are gonna loop over the linkedList and each time implement the function based
 ![](/assets/challenge-6C.PNG)
 
 
+> challenge-7 
+
+
+ # Challenge Summary
+ continuation of the linkedList.
+
+
+ ## Challenge Description
+ add on the: 
+
+- LinkedList class 
+that has a head property
+a method called ` kthValue`,
+that takes in an integer k and return the value of the node in the index that matches the K value form the end of the linked list. if k doesn't match any index value or it is in valid 
+return an error message 
+
+
+## Approach & Efficiency
+the big O here is of type O(N)
+we are gonna loop over the linkedList and each time implement the function based on the condition 
+
+
+## Solution
+
+![](/assets/challenge-7.PNG)
+
+
+
+
