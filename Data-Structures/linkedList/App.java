@@ -10,9 +10,9 @@ public class App {
 
         linkedList mylist = new linkedList();
        
-        mylist.insert(5);
-        mylist.insert(8);
-        mylist.insert(1);
+       //  mylist.insert(5);
+       //  mylist.insert(8);
+       //  mylist.insert(1);
  
  
  //        mylist.insert(15);
@@ -29,10 +29,32 @@ public class App {
  //        System.out.println(mylist.includes(15));
  //        System.out.println(mylist.includes(20));
 
-        System.out.println(mylist.kthValue(0));
+       //  System.out.println(mylist.kthValue(0));
  
  
-         System.out.println(mylist.toString());
+       //   System.out.println(mylist.toString());
+
+
+       // challenge-8 
+
+       mylist.insert(1);
+       mylist.insert(3);
+       mylist.insert(5);
+       mylist.insert(7);
+
+
+       linkedList mylist2 = new linkedList();
+       mylist2.insert(2);
+       mylist2.insert(4);
+       mylist2.insert(6);
+       mylist2.insert(8);
+
+       linkedList mylist3 = new linkedList();
+
+       // please note that my insert function inserts to the head so you will see that the result is
+       // reversed but the functionality is working as needed in the challenge requirements:
+
+       System.out.println(mylist3.zipLists(mylist,mylist2));
  
  
      }

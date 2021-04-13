@@ -128,5 +128,30 @@ we are gonna loop over the linkedList and each time implement the function based
 ![](/assets/challenge-7.PNG)
 
 
+> challenge 8 
 
+
+ # Challenge Summary
+ continuation of the linkedList.
+
+
+ ## Challenge Description
+ add on the: 
+
+- LinkedList class 
+that has a head property
+a method called `zipLists`,
+that takes in two linked lists merges the two linked lists together into one and alternate between the two lists and return the merged list
+
+
+
+
+## Approach & Efficiency
+the big O here is of type O(N)
+we are gonna loop over both linkedLists and each time implement the function based on the condition 
+
+
+## Solution
+
+![](/assets/challenge-8.PNG)
 

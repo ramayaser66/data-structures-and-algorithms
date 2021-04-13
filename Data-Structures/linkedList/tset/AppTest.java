@@ -160,4 +160,75 @@ public class AppTest {
 
 
 
+        
+    // challenge-8 tests 
+
+
+    @Test public void testZipListsOfSameSize(){
+        linkedList test = new linkedList();
+        linkedList testList1 = new linkedList();
+        linkedList testList2 = new linkedList();
+
+        testList1.insert(1);
+        testList1.insert(3);
+        testList1.insert(5);
+
+
+        testList2.insert(2);
+        testList2.insert(4);
+        testList2.insert(6);
+
+
+
+        String expected = "{5}->{6}->{3}->{4}->{1}->{2}->null";
+
+        assertEquals("an error occurred in ZipLists of the same size.... ", expected, test.zipLists(testList1,testList2).toString());
+
+    }
+    @Test public void testZipListsOfSmallerL1(){
+        linkedList test = new linkedList();
+        linkedList testList1 = new linkedList();
+        linkedList testList2 = new linkedList();
+
+        testList1.insert(1);
+        testList1.insert(3);
+//        testList1.insert(5);
+
+
+        testList2.insert(2);
+        testList2.insert(4);
+        testList2.insert(6);
+
+
+
+        String expected = "{3}->{6}->{1}->{4}->{2}->null";
+
+        assertEquals("an error occurred in ZipLists of the same size.... ", expected, test.zipLists(testList1,testList2).toString());
+
+    }
+
+
+    @Test public void testZipListsOfSmallerL2(){
+        linkedList test = new linkedList();
+        linkedList testList1 = new linkedList();
+        linkedList testList2 = new linkedList();
+
+        testList1.insert(1);
+        testList1.insert(3);
+        testList1.insert(5);
+
+
+        testList2.insert(2);
+        testList2.insert(4);
+//        testList2.insert(6);
+
+
+
+        String expected = "{5}->{4}->{3}->{2}->{1}->null";
+
+        assertEquals("an error occurred in ZipLists of the same size.... ", expected, test.zipLists(testList1,testList2).toString());
+
+    }
+
+
 }
