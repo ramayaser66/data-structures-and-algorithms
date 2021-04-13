@@ -197,4 +197,33 @@ try {
 
 
 
+
+
+    // challenge-8
+
+
+    public linkedList zipLists(linkedList one, linkedList two){
+        node p1 = one.head;
+        node x =p1.getNext();
+        node p2 = two.head;
+
+        while(x!=null && p2 !=null){
+            p1.setNext(p2);
+            two.head = p2.getNext();
+            p2.setNext(x);
+            p1 =x;
+            x = p1.getNext();
+            p2 = two.head;
+        }
+        p1.setNext(p2);
+
+        return one;
+
+    }
+
+
+
+
+
+
 }
