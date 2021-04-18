@@ -155,3 +155,105 @@ we are gonna loop over both linkedLists and each time implement the function bas
 
 ![](/assets/challenge-8.PNG)
 
+
+
+> challenge 10 
+
+# Stacks and Queues
+Dealing with Stacks and Queues 
+
+## Challenge
+classes: 
+-  ## `Stack class`
+ with a the property  Node top.
+which has 4 methods:
+1. push 
+2. pop
+3. peek
+4. isEmpty 
+ - ## `Queue class`
+ with a the properties Node front, Node rear. 
+
+ which has 4 methods:
+ 1. enqueue
+ 2. dequeue
+ 3. peek
+ 4. isEmpty
+
+  - ## `Node class` 
+ with the properties int value and Node next.
+
+## Approach & Efficiency
+all the functions had a O(n) complexity
+
+
+## API
+
+ ## In The Stack Class
+ ___________________________________
+ <span style="color:red">1.push</span>.
+which takes any value as an argument and adds a new node with that value to the top of the stack.
+
+
+<span style="color:red">2.pop</span>.
+which does not take any argument, removes the node from the top of the stack, and returns the node’s value.
+NOTE:
+it Should return an exception it the stack is empty.
+
+
+<span style="color:red">3.peek</span>.
+which does not take an argument and returns the value of the node located on top of the stack, without removing it from the stack.
+NOTE:
+it Should return an exception it the stack is empty
+
+<span style="color:red">3.isEmpty</span>.
+ that takes no argument, and returns a boolean indicating whether or not the stack is empty.
+
+
+## In The Queue class _______________________________________________
+
+<span style="color:red">1.enqueue</span>.
+which takes any value as an argument and adds a new node with that value to the back of the queue
+
+<span style="color:red">2.dequeue</span>.
+hat does not take any argument, removes the node from the front of the queue, and returns the node’s value.
+NOTE:
+it Should return an exception it the queue is empty.
+
+
+<span style="color:red">3.peek</span>.
+ that does not take an argument and returns the value of the node located in the front of the queue, without removing it from the queue.
+NOTE:
+it Should return an exception it the queue is empty
+
+<span style="color:red">3.isEmpty</span>.
+ that takes no argument, and returns a boolean indicating whether or not the queue is empty.
+
+ 
+ > challenge-11
+
+ # Challenge Summary
+dealing with Pseudo Queues 
+
+## Challenge Description
+classes:
+- `PseudoQueue` 
+it has two properties of type stack s1 and s2.
+
+methods: 
+- `enqueue`
+this method pushes the input value to the first stack.
+
+- `dequeue`
+pushes the values of the first stack to the the second stack in order to reverse it then it 
+pops of the top of the second stack.
+
+so that it follows the first in first out principle
+
+## Approach & Efficiency
+- `enqueue` big O of one O(1), I don't have any loops 
+- `dequeue` big O of n O(n), I have a while loop 
+
+## Solution
+
+![](/assets/challenge-11.PNG)
