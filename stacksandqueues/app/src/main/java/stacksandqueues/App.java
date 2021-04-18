@@ -36,9 +36,20 @@ public class App {
 
 
 
-        System.out.println(queue1.peek());
+//        System.out.println(queue1.peek());
 //        System.out.println(queue1.isEmpty());
 
+
+        // code-challenge-11
+
+        PseudoQueue pseudoQueue1 = new PseudoQueue();
+        pseudoQueue1.enqueue(20);
+        pseudoQueue1.enqueue(15);
+        pseudoQueue1.enqueue(10);
+        pseudoQueue1.enqueue(5);
+
+        System.out.println(pseudoQueue1.s1.peek());
+        System.out.println(pseudoQueue1.dequeue());
 
 
 

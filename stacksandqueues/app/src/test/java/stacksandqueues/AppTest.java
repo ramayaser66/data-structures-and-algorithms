@@ -172,6 +172,49 @@ public class AppTest {
 //    }
 
 
+    //challenge-11
+
+    @Test public void testEmptyPseudoQueue(){
+        PseudoQueue pseudoQueue1 = new PseudoQueue();
+
+       assertTrue("an error with the empty stack test..",pseudoQueue1.s1.isEmpty());
+       assertTrue("an error with the empty stack test..",pseudoQueue1.s2.isEmpty());
+
+    }
+
+    @Test public void testEnqueuePseudoQueue(){
+        PseudoQueue pseudoQueue1 = new PseudoQueue();
+
+        pseudoQueue1.enqueue(20);
+        pseudoQueue1.enqueue(15);
+        pseudoQueue1.enqueue(10);
+        pseudoQueue1.enqueue(5);
+
+        System.out.println(pseudoQueue1.s1.peek());
+
+        int expected = 5;
+        assertEquals("an error with the Pseudo Queue peek test ..", expected,pseudoQueue1.s1.peek());
+
+
+
+    }
+
+    @Test public void testDequeuePseudoQueue(){
+        PseudoQueue pseudoQueue1 = new PseudoQueue();
+
+        pseudoQueue1.enqueue(20);
+        pseudoQueue1.enqueue(15);
+        pseudoQueue1.enqueue(10);
+        pseudoQueue1.enqueue(5);
+
+        int expected = 20;
+        assertEquals("an error with the Pseudo Queue peek test ..", expected,pseudoQueue1.dequeue());
+
+
+
+    }
+
+
 
 
 
