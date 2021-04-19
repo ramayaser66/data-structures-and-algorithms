@@ -312,3 +312,16 @@ this method checks if the pref inputted from the user, if it is null or a cat or
 if it is anything other than a cat or a dog it will return null. 
 if it is a cat it will check the peek of the queue, if it matches the input it will dequeue the peek and return its value. 
 if it doesn't match it will dequeue the peek, return the value of it then enqueue it back again 
+
+## Approach & Efficiency
+- `enqueue` big O of one O(1),
+- `dequeue` big O of n O(1),
+
+## Solution
+
+![](/assets/challenge-12-A.PNG)
+
+_____________________________________
+![](/assets/challenge-12-b.PNG)
+________________________________________
+![](/assets/challenge-12-c.PNG)
