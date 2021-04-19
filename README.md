@@ -257,3 +257,58 @@ so that it follows the first in first out principle
 ## Solution
 
 ![](/assets/challenge-11.PNG)
+
+
+> challenge-12
+
+ # Challenge Summary
+First-in, First out Animal Shelter
+
+## Challenge Description
+classes:
+- `cat` 
+it has a property of type String name, this class extends animal class
+- `dog` 
+it has a property of type String name, this class extends animal class
+
+-  `animal` 
+it has a property of type String name.
+-  `Queue` 
+it has a property of type String name.
+
+  - `Node class` 
+ with the properties int value and Node next.
+
+ - `Queue class`
+ with a the properties Node front, Node rear. 
+
+ which has 4 methods:
+ 1. enqueue
+ 2. dequeue
+ 3. peek
+ 4. isEmpty
+
+methods: 
+- `enqueue`
+this method pushes the input value to the first stack.
+
+- `dequeue`
+pushes the values of the first stack to the the second stack in order to reverse it then it 
+pops of the top of the second stack.
+
+so that it follows the first in first out principle
+
+-  `AnimalShelter` 
+where created an array of objects of type Queue 
+
+methods: 
+- `enqueue`
+this method adds animal  array object to the queue, it checks if the animal is a dog or cat. 
+and it defines an object array of length 2, the first index will be the name of the animal and the second index will be the type 
+if neither of them it throws an exception. 
+
+- `dequeue`
+this method checks if the pref inputted from the user, if it is null or a cat or a dog or neither 
+if it is anything other than a cat or a dog it will return null. 
+if it is a cat it will check the peek of the queue, if it matches the input it will dequeue the peek and return its value. 
+if it doesn't match it will dequeue the peek, return the value of it then enqueue it back again 
