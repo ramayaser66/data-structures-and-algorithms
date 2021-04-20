@@ -3,6 +3,9 @@
  */
 package utilities;
 
+import java.util.HashMap;
+import java.util.Stack;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,18 +13,27 @@ public class App {
 
     public static void main(String[] args)
     {
-       AnimalShelter a =  new AnimalShelter();
+//       AnimalShelter a =  new AnimalShelter();
+//
+//       Animal animal = new Cat("cat1");
+//       Animal animal2 = new Dog("dog1");
+//        Animal animal3 = new Dog("dog2");
+//
+//       a.enqueue(animal);
+//       a.enqueue(animal2);
+//        a.enqueue(animal3);
+//
+//       System.out.println(a.dequeue("cat"));
+//        System.out.println(a.dequeue("dog"));
+//        System.out.println(a.queue1.peek()[0]);
 
-       Animal animal = new Cat("cat1");
-       Animal animal2 = new Dog("dog1");
-        Animal animal3 = new Dog("dog2");
+        MultiBracketValidation test = new MultiBracketValidation();
 
-       a.enqueue(animal);
-       a.enqueue(animal2);
-        a.enqueue(animal3);
+        System.out.println(test.multiBracketValidation("()[[Extra Characters]]"));
+        System.out.println(test.multiBracketValidation("{}(){}"));
+        System.out.println(test.multiBracketValidation("[({}]"));
 
-       System.out.println(a.dequeue("cat"));
-        System.out.println(a.dequeue("dog"));
-        System.out.println(a.queue1.peek()[0]);
+        System.out.println(test.multiBracketValidation(""));
     }
+
 }

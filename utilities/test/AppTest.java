@@ -39,5 +39,31 @@ public class AppTest {
         assertEquals("the output is ","dog1" ,test.dequeue("dog"));
     }
 
+    //challenge-13
+    
+    @Test
+    public void testMultiBracketValidation(){
+        MultiBracketValidation test = new MultiBracketValidation();
+
+        assertTrue("an error in testing MultiBracketValidation",test.multiBracketValidation("()[[Extra Characters]]") );
+    }
+
+
+    @Test
+    public void testMultiBracketValidationFalseCase(){
+        MultiBracketValidation test = new MultiBracketValidation();
+
+        assertFalse("an error in testing MultiBracketValidation",test.multiBracketValidation("(]("));
+    }
+
+
+
+    @Test
+    public void testMultiBracketValidationEmpty(){
+        MultiBracketValidation test = new MultiBracketValidation();
+
+        assertTrue("an error in testing MultiBracketValidation",test.multiBracketValidation(""));
+    }
+
 
 }
