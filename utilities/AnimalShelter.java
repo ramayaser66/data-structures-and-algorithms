@@ -14,8 +14,6 @@ public class AnimalShelter {
 public void enqueue(Animal animal)  {
         Object[] animalInfo = new Object[2];
 
-
-
         if(animal instanceof Cat){
             animalInfo[0] = animal.name;
 

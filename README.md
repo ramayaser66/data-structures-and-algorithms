@@ -277,7 +277,7 @@ it has a property of type String name.
 it has a property of type String name.
 
   - `Node class` 
- with the properties int value and Node next.
+ with the properties object value and Node next.
 
  - `Queue class`
  with a the properties Node front, Node rear. 
@@ -326,3 +326,40 @@ _____________________________________
 ________________________________________
 ![](/assets/challenge-12-c.PNG)
 ______________________________________
+
+
+> challenge-13
+## Challenge Description
+classes:
+  - `Node class` 
+ with the properties object value and Node next.
+
+ - `MultiBracketValidation class`
+
+
+ which has a multiBracketValidation method, that takes in an input String and returns a boolean 
+ 
+
+methods: 
+- `multiBracketValidation`
+this method takes in an input String, 
+it has a hash map called map and a stack of type character called stack.
+ the map has the following keys and values:
+('[', ']')
+('{', '}')
+('(', ')')
+
+this method loops over the input length and stores the index it is on in a variable called current of type character. 
+then it checks if this current is one of the keys in the map or not, if so it adds it to the stack 
+if not it checks if the current is one of the values of the map, if so, it checks if the stacks is empty or not and if the stack peek passes the value of peek to the map as key and then gets the value of this key and checks if it is equal to the current or not , if so it pops it 
+if not returns false 
+ 
+
+## Approach & Efficiency
+- `multiBracketValidation` big O of one O(n),
+
+
+## Solution
+
+![](/assets/challenge-13-A.PNG)
+![](/assets/challenge-13-B.PNG)
