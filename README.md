@@ -363,3 +363,74 @@ if not returns false
 
 ![](/assets/challenge-13-A.PNG)
 ![](/assets/challenge-13-B.PNG)
+
+
+> challenge-15
+
+# Trees
+Dealing with Trees 
+
+## Challenge
+classes: 
+
+- ` Node class`,  has properties int value, Node left and Node  right. 
+
+- `BinaryTree class`, 
+methods:
+
+- `preOrder`
+ returns an array of the values, ordered appropriately.
+ root >> left >> right
+
+- `inOrder`
+returns an array of the values, ordered appropriately.
+left >> root >> right
+
+- `postOrder`
+returns an array of the values, ordered appropriately.
+left >> right >> root
+
+- `BinarySearchTree class`
+methods:
+
+- `Add`
+takes in a value and adds a new node with that value in the correct location in the binary search tree.
+
+- `contains`
+a value, and returns a boolean indicating whether or not the value is in the tree 
+
+
+## Approach & Efficiency
+the PreOrder method, inOrder and PostOrder implement the depth first traversals. 
+the big O:
+O(n)will have to look at n items, hence the O(n) complexity.
+
+the contains method takes a log(n), 
+
+## API
+
+- `preOrder`
+ 
+root node, then the left , and finally the right 
+root >> left >>  right
+- `inOrder`
+ first visiting the left , then the root node, and finally the right
+left >> root >> right
+
+- `postOrder`
+ left, the right, and the root node at the end
+left >> right >> root
+
+- `BinarySearchTree class`
+methods:
+
+- `Add`
+in this method, we will check if the node is null, insert the new node in that position. 
+if the new node's value is lower than the current node's, we go to the left
+if the new node's value is greater than the current node's, we go to the right
+
+
+- `contains`
+ this method checks if the tree contains a specific value or not 
+ first check if the node is null,if so return false
+  if not then compare the value to the value in the current node, then continue in the left or right child depending on that.
