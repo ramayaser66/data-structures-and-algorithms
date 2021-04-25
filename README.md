@@ -70,10 +70,11 @@ the big O here is of type O(N)
 a method called `insert`, which takes any value as an argument and adds a new node with that value to the head of the list 
 a method called` includes`,  takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
  a method called `toString`, takes in no arguments and returns a string representing all the values in the Linked List 
+__________________________________________
 
- > challenge 6 
+ > # challenge 6 
 
- # Challenge Summary
+ ## Challenge Summary
  continuation of the linkedList.
 
 
@@ -101,10 +102,12 @@ we are gonna loop over the linkedList and each time implement the function based
 ![](/assets/challenge-6C.PNG)
 
 
-> challenge-7 
+______________________________________________
+
+> # challenge-7 
 
 
- # Challenge Summary
+ ## Challenge Summary
  continuation of the linkedList.
 
 
@@ -126,12 +129,14 @@ we are gonna loop over the linkedList and each time implement the function based
 ## Solution
 
 ![](/assets/challenge-7.PNG)
+______________________________________________
 
 
-> challenge 8 
+
+> # challenge 8 
 
 
- # Challenge Summary
+ ## Challenge Summary
  continuation of the linkedList.
 
 
@@ -155,11 +160,13 @@ we are gonna loop over both linkedLists and each time implement the function bas
 
 ![](/assets/challenge-8.PNG)
 
+_________________________________________ 
 
 
-> challenge 10 
 
-# Stacks and Queues
+> # challenge 10 
+
+## Stacks and Queues
 Dealing with Stacks and Queues 
 
 ## Challenge
@@ -229,10 +236,11 @@ it Should return an exception it the queue is empty
 <span style="color:red">3.isEmpty</span>.
  that takes no argument, and returns a boolean indicating whether or not the queue is empty.
 
- 
- > challenge-11
+ _______________________________________
 
- # Challenge Summary
+ > # challenge-11
+
+ ## Challenge Summary
 dealing with Pseudo Queues 
 
 ## Challenge Description
@@ -258,10 +266,13 @@ so that it follows the first in first out principle
 
 ![](/assets/challenge-11.PNG)
 
+__________________________________
 
-> challenge-12
 
- # Challenge Summary
+
+>#  challenge-12
+
+ ## Challenge Summary
 First-in, First out Animal Shelter
 
 ## Challenge Description
@@ -328,7 +339,8 @@ ________________________________________
 ______________________________________
 
 
-> challenge-13
+> # challenge-13
+
 ## Challenge Description
 classes:
   - `Node class` 
@@ -365,9 +377,9 @@ if not returns false
 ![](/assets/challenge-13-B.PNG)
 
 
-> challenge-15
+> # challenge-15
 
-# Trees
+## Trees
 Dealing with Trees 
 
 ## Challenge
@@ -434,3 +446,42 @@ if the new node's value is greater than the current node's, we go to the right
  this method checks if the tree contains a specific value or not 
  first check if the node is null,if so return false
   if not then compare the value to the value in the current node, then continue in the left or right child depending on that.
+
+  __________________________________
+
+  > # challenge-16
+
+## Trees
+ continuation of dealing with Trees 
+
+## Challenge
+classes: 
+
+- ` Node class`,  has properties int value, Node left and Node  right. 
+
+- `BinarySearchTree class`
+
+- `BinaryTree class`
+
+methods:
+a new method called 
+- find-maximum-value, this method returns the maximum value stored in the tree it was called on. 
+
+
+## Approach & Efficiency
+O(n)will have to look at n items, hence the O(n) complexity, where n is the number of nodes in binary tree.
+
+## API
+
+- `find-maximum-value`
+
+ this method goes throw the tree and checks its values, compere these values with each other,
+ each node it checks it takes its value and compare it to the previous one, first it will check if the node is null,if so  it will call a null pointer exception. 
+ if it has nodes then it will start from the root, take its value and store it as the initial corrasion value. the it will use recession to check the left and right children with their values and store them in a left and right variables then compare these variables with the value i have. 
+ if the right is bigger than the left that means I will set the comparison value to the right node's value and compare it with the next and so on.
+ if it is lower it will go  for the left value 
+ and finally when I end up with what will be the maximum value I will return it to the user. 
+
+
+ 
+![](/assets/1111.PNG)

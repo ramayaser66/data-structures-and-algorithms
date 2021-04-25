@@ -126,6 +126,34 @@ public class BinaryTree extends BinarySearchTree{
     }
 
 
+    // challenge-16
+
+    public int findMaximumValue(){
+        return maxValue(root, root.value);
+    }
+
+    public int maxValue(Node node, int value){
+        if(node == null){
+            return value;
+
+        }if(node.value >= value){
+            value = node.value;
+
+
+        }int right = maxValue(node.right, value);
+         int left = maxValue(node.left, value);
+         if(right > left){
+             value = right;
+         }else{
+             value = left;
+         }
+        return value;
+
+
+    }
+
+
+
 }
 
 
