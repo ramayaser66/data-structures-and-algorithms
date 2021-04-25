@@ -118,18 +118,43 @@ public class AppTest {
 
 
 
+  // challenge-16
+
+  @Test  public void testMaximumValue(){
+    BinaryTree  myTree = new BinaryTree();
+    myTree.add(7);
+    myTree.add(8);
+    myTree.add(6);
+    myTree.add(10);
+    myTree.add(9);
+
+     int expected = 10;
+
+    assertEquals("testing finding the maximum value in a tree ",expected, myTree.findMaximumValue());
+}
+
+@Test  public void testMaximumValueForRepeatedValues(){
+    BinaryTree  myTree = new BinaryTree();
+
+    myTree.add(10);
+    myTree.add(10);
+    myTree.add(10);
+    myTree.add(10);
+    myTree.add(10);
+    myTree.add(10);
+
+    int expected = 10;
+
+    assertEquals("testing finding the maximum value in a tree that holds Repeated Values ",expected, myTree.findMaximumValue());
+}
 
 
+@Test(expected = NullPointerException.class)
+public void treeIsEmpty(){
+BinaryTree  myTree = new BinaryTree();
 
-
-
-
-
-
-
-
-
-
+    assertEquals(new NullPointerException(), myTree.findMaximumValue());
+}
 
 
 
