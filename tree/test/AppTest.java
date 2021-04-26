@@ -157,6 +157,62 @@ BinaryTree  myTree = new BinaryTree();
 }
 
 
+ //challenge-17
+
+
+ @Test  public void testBreadthFisrt(){
+    BinaryTree  myTree = new BinaryTree();
+
+    myTree.add(7);
+    myTree.add(8);
+    myTree.add(6);
+    myTree.add(10);
+    myTree.add(10);
+    myTree.add(-10);
+
+
+    List<Integer> expected = new ArrayList();
+    expected.add(7);
+    expected.add(6);
+    expected.add(8);
+    expected.add(-10);
+    expected.add(10);
+    expected.add(10);
+
+    assertEquals(expected, myTree.breadthFirst(myTree.root));
+}
+
+
+
+@Test(expected = NullPointerException.class)
+public void breadthFisrtTreeIsEmpty(){
+    BinaryTree  myTree = new BinaryTree();
+
+    assertEquals(new NullPointerException("the tree is empty"), myTree.breadthFirst(myTree.root));
+}
+
+
+
+@Test  public void testBreadthFisrtForRepeatedValues(){
+    BinaryTree  myTree = new BinaryTree();
+
+    myTree.add(10);
+    myTree.add(10);
+    myTree.add(10);
+
+
+    List<Integer> expected = new ArrayList();
+    expected.add(10);
+    expected.add(10);
+    expected.add(10);
+
+    assertEquals(expected, myTree.breadthFirst(myTree.root));
+}
+
+
+
+
+
 
 
 

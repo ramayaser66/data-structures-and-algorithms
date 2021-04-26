@@ -154,6 +154,38 @@ public class BinaryTree extends BinarySearchTree{
 
 
 
+// challenge-17
+
+    public List<Integer> breadthFirst(Node node ){
+        Queue<Node> breadth = new LinkedList<Node>();
+      List<Integer> result = new ArrayList<Integer>();
+
+        if(node == null){
+            throw new NullPointerException("the tree is empty");
+        }else{
+
+            breadth.add(node);
+            result.add(node.value);
+
+            while(!breadth.isEmpty()){
+                Node temp = breadth.poll();
+
+                if(temp.left!=null){
+                    breadth.add(temp.left);
+                    result.add(temp.left.value);
+                }
+
+                if(temp.right!=null){
+                    breadth.add(temp.right);
+                    result.add(temp.right.value);
+                }
+            }
+            return result;
+        }
+    }
+
+
+
 }
 
 

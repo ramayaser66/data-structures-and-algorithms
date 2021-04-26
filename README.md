@@ -485,3 +485,41 @@ O(n)will have to look at n items, hence the O(n) complexity, where n is the numb
 
  
 ![](/assets/1111.PNG)
+
+
+ __________________________________
+
+  > # challenge-17
+
+## Trees
+ continuation of dealing with Trees 
+
+## Challenge
+classes: 
+
+continuation on the -> 
+- `BinaryTree class`
+
+methods:
+a new method called 
+- breadthFirst, this method  takes a Binary Tree as its unique input -> Traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+  
+
+## Approach & Efficiency
+O(n)will have to look at n items, hence the O(n) complexity, where n is the number of nodes in binary tree.
+
+## API
+
+- `breadthFirst`
+
+ this method goes traversal iterates through the tree by going through each level of the tree node-by-node.
+ IT uses a queue to traverse the width/breadth of the tree.
+ it starts by checking if the tree is empty ot not, if so it returns a null pointer exception. 
+ if not it starts with the root node. as it is passed when the function is called. 
+ then it loops over the queue length using a while loop, in the first titration it will have the root loop over it and polling it out of the queue and taking its value and storing it in a variable called temp, then checks if it has left and right children. if so they will be added to the queue (nodes) and their values will be added in a list called result at the end I would have all values of the nodes in the tree stored in the result list and in a breadth first approach and then return that list.  
+ 
+
+
+![](/assets/challenge-17-A.PNG)
+![](/assets/challenge-17-B.PNG)
