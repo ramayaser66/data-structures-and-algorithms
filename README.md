@@ -523,3 +523,43 @@ O(n)will have to look at n items, hence the O(n) complexity, where n is the numb
 
 ![](/assets/challenge-17-A.PNG)
 ![](/assets/challenge-17-B.PNG)
+
+
+ __________________________________
+
+  > # challenge-18
+
+## Trees
+ continuation of dealing with Trees 
+
+## Challenge
+classes:  
+create -> 
+- `FizzBuzzTree`
+
+methods:
+a new method called 
+- FizzBuzzTree, this method  takes a Binary Tree as its input -> Traverse the input tree and checks whether or not the value of each node is divisible by 3, 5 or both if so return the tree with its values set to "Fizz", "Buzz" and "FizzBuzz accordingly. 
+
+  
+
+## Approach & Efficiency
+O(n)will have to look at n items, hence the O(n) complexity, where n is the number of nodes in binary tree.
+
+## API
+
+-  `FizzBuzzTree`
+
+ this method takes in a tree and a node root, it traversal through the tree using any of the available methods of traversing written perviously in the binary tree class,for demonstration inOrder approach was used, 
+ first check if the tree is empty or not, if so return the empty tree.
+  If not it goes through the tree starting form the root and checks if it is divisible by 3 or 5 or both and accordingly returns "Fizz", "Buzz" and "FizzBuzz".
+ then it check the left and right if they exists or not, if so check their values
+ finally return the tree with the modified values
+
+ 
+
+
+
+![](/assets/challenge-18.PNG)
+
+

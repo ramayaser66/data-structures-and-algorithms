@@ -1,16 +1,18 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
-public class BinaryTree extends BinarySearchTree{
+public class BinaryTree<T extends Comparable> extends BinarySearchTree{
 //    Node root;
 
     public BinaryTree(){
        super();
     }
 
-    public BinaryTree(int value) {
+    public BinaryTree(T value) {
         Node node1 = new Node(value);
         this.root = node1;
     }
@@ -60,19 +62,19 @@ public class BinaryTree extends BinarySearchTree{
 
     // preOrder
 
-    public List<Integer> PreOrder() {
-        List<Integer> treeList = new ArrayList<>();
+    public List<T> PreOrder() {
+        List<T> treeList = new ArrayList<>();
 
 
         return traversePreOrder(root, treeList);
     }
 
-    public List<Integer> traversePreOrder(Node node, List<Integer> treeList) {
+    public List<T> traversePreOrder(Node node, List<T> treeList) {
 
         if(node == null){
             return treeList;
         }
-        treeList.add(node.value);
+        treeList.add((T)node.value);
         treeList = traversePreOrder(node.left, treeList);
         treeList = traversePreOrder(node.right, treeList);
 
@@ -82,21 +84,21 @@ public class BinaryTree extends BinarySearchTree{
 
     // inOrder
 
-    public List<Integer> inOrder() {
-        List<Integer> treeList = new ArrayList<>();
+    public List<T> inOrder() {
+        List<T> treeList = new ArrayList<>();
 
 
         return traverseinOrder(root, treeList);
     }
 
-    public List<Integer> traverseinOrder(Node node, List<Integer> treeList) {
+    public List<T> traverseinOrder(Node node, List<T> treeList) {
 
         if(node == null){
             return treeList;
         }
 
         treeList = traverseinOrder(node.left, treeList);
-        treeList.add(node.value);
+        treeList.add((T)node.value);
         treeList = traverseinOrder(node.right, treeList);
 
         return treeList;
@@ -105,14 +107,14 @@ public class BinaryTree extends BinarySearchTree{
 
     // postOrder
 
-    public List<Integer> PostOrder() {
-        List<Integer> treeList = new ArrayList<>();
+    public List<T> PostOrder() {
+        List<T> treeList = new ArrayList<>();
 
 
         return traversePostOrder(root, treeList);
     }
 
-    public List<Integer> traversePostOrder(Node node, List<Integer> treeList) {
+    public List<T> traversePostOrder(Node node, List<T> treeList) {
 
         if(node == null){
             return treeList;
@@ -120,7 +122,7 @@ public class BinaryTree extends BinarySearchTree{
 
         treeList = traversePostOrder(node.left, treeList);
         treeList = traversePostOrder(node.right, treeList);
-        treeList.add(node.value);
+        treeList.add((T)node.value);
 
         return treeList;
     }
@@ -129,55 +131,46 @@ public class BinaryTree extends BinarySearchTree{
     // challenge-16
 
     public int findMaximumValue(){
-        return maxValue(root, root.value);
+        return maxValue(root, (Integer)root.value);
     }
 
-    public int maxValue(Node node, int value){
+    public int maxValue(Node node, int maxVal){
         if(node == null){
-            return value;
+            return maxVal;
 
-        }if(node.value >= value){
-            value = node.value;
+        }if((Integer)node.value >= maxVal  ){
+            maxVal = (Integer)node.value;
 
 
-        }int right = maxValue(node.right, value);
-         int left = maxValue(node.left, value);
+        }int right = maxValue(node.right, maxVal);
+         int left = maxValue(node.left, maxVal);
          if(right > left){
-             value = right;
+             maxVal = right;
          }else{
-             value = left;
+             maxVal = left;
          }
-        return value;
+        return maxVal;
 
 
     }
 
-
-
-// challenge-17
-
-    public List<Integer> breadthFirst(Node node ){
+    public List<T> breadthFirst(Node curr ){
         Queue<Node> breadth = new LinkedList<Node>();
-      List<Integer> result = new ArrayList<Integer>();
-
-        if(node == null){
+      List<T> result = new ArrayList<T>();
+        if(curr == null){
             throw new NullPointerException("the tree is empty");
         }else{
-
-            breadth.add(node);
-            result.add(node.value);
-
+            breadth.add(curr);
+            result.add((T)curr.value);
             while(!breadth.isEmpty()){
                 Node temp = breadth.poll();
-
                 if(temp.left!=null){
                     breadth.add(temp.left);
-                    result.add(temp.left.value);
+                    result.add((T)temp.left.value);
                 }
-
                 if(temp.right!=null){
                     breadth.add(temp.right);
-                    result.add(temp.right.value);
+                    result.add((T)temp.right.value);
                 }
             }
             return result;
@@ -186,7 +179,12 @@ public class BinaryTree extends BinarySearchTree{
 
 
 
+
+
+
 }
+
+
 
 
 
