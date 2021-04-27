@@ -14,22 +14,32 @@ public class App {
 
         BinaryTree  myTree = new BinaryTree ();
 
-
-
         myTree.add(7);
         myTree.add(8);
         myTree.add(6);
         myTree.add(10);
-        myTree.add(9);
-//
-//
-        System.out.println(myTree.PreOrder());
-        System.out.println(myTree.inOrder());
-        System.out.println(myTree.PostOrder());
+        myTree.add(10);
+        myTree.add(-10);
+//        System.out.println(myTree.breadthFirst(myTree.root));
 
-        System.out.println(myTree.contains(8));
-        System.out.println(myTree.contains(10));
-        System.out.println(myTree.contains(1));
+
+        FizzBuzzTree f = new FizzBuzzTree();
+
+        System.out.println(f.FizzBuzzTree(myTree, myTree.root).inOrder());
+//        System.out.println(f.FizzBuzzTree(myTree, myTree.root).breadthFirst(myTree.root));
+//
+//
+//        System.out.println(myTree.PreOrder());
+//        System.out.println(myTree.inOrder());
+//        System.out.println(myTree.PostOrder());
+//
+//        System.out.println(myTree.contains(8));
+//        System.out.println(myTree.contains(10));
+//        System.out.println(myTree.contains(1));
+
+        // challenge-16
+
+//        System.out.println(myTree.findMaximumValue());
 
     }
 }

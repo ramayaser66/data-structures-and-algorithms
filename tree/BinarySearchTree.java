@@ -1,6 +1,6 @@
 package tree;
 
-public class BinarySearchTree {
+public class BinarySearchTree<T extends Comparable> {
 
     Node root;
 
@@ -15,19 +15,19 @@ public class BinarySearchTree {
         this.root = null;
     }
 
-    public void add(int value) {
+    public void add(T value) {
         root = addToTree(root, value);
     }
 
 
-    public Node addToTree(Node node, int value) {
+    public Node addToTree(Node node, T value) {
 try {
     if (node == null) {
         return new Node(value);
-    } else if (value > node.value) {
+    } else if (value.compareTo(node.value) >0 ) {
         node.right = addToTree(node.right, value);
 
-    } else if (value < node.value) {
+    } else if (value.compareTo(node.value) <= 0) {
         node.left = addToTree(node.left, value);
 
     } else {
@@ -43,12 +43,12 @@ try {
 //    Here, we're searching for the value by comparing it to the
 //    value in the current node, then continue in the left or right child depending on that.
 
-    public boolean contains(int value) {
+    public boolean contains(T value) {
 
         return containsNode(root, value);
     }
 
-    public boolean containsNode(Node node, int value) {
+    public boolean containsNode(Node node, T value) {
         try {
             if (node == null) {
                 return false;
@@ -56,7 +56,7 @@ try {
             if (value == node.value) {
                 return true;
             }
-            return value < node.value
+            return value.compareTo(node.value) < 0
                     ? containsNode(node.left, value)
                     : containsNode(node.right, value);
         } catch(Exception ex){
