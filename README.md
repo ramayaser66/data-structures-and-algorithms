@@ -560,6 +560,35 @@ O(n)will have to look at n items, hence the O(n) complexity, where n is the numb
 
 
 
-![](/assets/challenge-18.PNG)
+![](assets/challenge-18.PNG)
+
+
+
+
+
+
+
+
+
+_________________________________________________________________________
+
+
+># challenge 26 
+
+# Challenge Summary
+an insertionSort function that takes in an array and sorts it form the smallest element to the largest 
+
+## Whiteboard Process
+
+![](assets/challenge26B.jpg)
+
+![](assets/challenge-26A.jpg)
+
+## Approach & Efficiency
+big O of O(n^2) I have a loop inside a loop 
+
+## Solution
+you can run the code by creating an object from the InsertionSort class then using that object to call the function insertionSort and pass in the array you want to sort. 
+
 
 
