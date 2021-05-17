@@ -590,5 +590,20 @@ big O of O(n^2) I have a loop inside a loop
 ## Solution
 you can run the code by creating an object from the InsertionSort class then using that object to call the function insertionSort and pass in the array you want to sort. 
 
+_________________________________________
+
+># challenge 27 
+
+# Challenge Summary
+an MergeSort function that takes in an array and divides it onto halves then sorts them form the smallest element to the largest 
+
+## Whiteboard Process
+check the blog.md
+## Approach & Efficiency
+big O of O(log(n))  
+
+## Solution
+you can run the code by creating an object from the MergeSort class then using that object to call the function mergeSort and pass in the array you want to sort. 
+
 
 
