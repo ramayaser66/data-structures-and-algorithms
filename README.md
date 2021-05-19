@@ -600,10 +600,34 @@ an MergeSort function that takes in an array and divides it onto halves then sor
 ## Whiteboard Process
 check the blog.md
 ## Approach & Efficiency
-big O of O(log(n))  
+big O 
+space complexity for the quick sort is O(n)
+time complexity for the quick sort is O(nlogn)
+here it is evaluated to (nlogn) because we have recursion and the merge function  
 
 ## Solution
 you can run the code by creating an object from the MergeSort class then using that object to call the function mergeSort and pass in the array you want to sort. 
+
+
+># challenge 28 
+
+# Challenge Summary
+an quick sort function that takes in an array and divides it and sorts it form the smallest element to the largest 
+
+## Whiteboard Process
+check the blog.md
+
+## Approach & Efficiency
+
+space complexity for the quick sort is O(n)
+
+time complexity for the quick sort is O(nlogn)
+here it is evaluated to nlogn because we have recursion and the partition 
+
+## Solution
+you can run the code by creating an object from the quick class then using that object to call the function quickSort and pass in the array you want to sort. 
+
+
 
 
 
