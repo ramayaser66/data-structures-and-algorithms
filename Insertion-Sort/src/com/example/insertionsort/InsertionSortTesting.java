@@ -20,7 +20,7 @@ public class InsertionSortTesting {
         assertArrayEquals("testing inertion sort unsorted array", expected,insertionsort.InsertionSort(testArray1));
 
     }
-    
+
     @Test
     public void TestInsertionSortForReverseSorted(){
         Insertionsort insertionsort = new Insertionsort();
