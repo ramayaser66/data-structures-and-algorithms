@@ -3,7 +3,9 @@
 a collection that is used to store in the form of key-value items, where you can store the key into a data structure, and quickly retrieve the value
 
 ## Challenge
-we are required to Implement a Hashtable with an 
+
+we are required to Implement a HashTable with an 
+
 
 - `Add method` to be able to add a key and a value to the array and  hash the key, and add the key and value pair to the table, handling collisions as needed.
 
