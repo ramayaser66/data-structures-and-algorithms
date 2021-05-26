@@ -1,0 +1,4 @@
+
+# LeftJoin 
+
+not finished yet 
