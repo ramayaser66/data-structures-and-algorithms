@@ -152,7 +152,7 @@ public class TestGraphs {
         Node FirstNode = test.AddNode(1);
 
         test.Size();
-        String expected = "[ value=A]";
+        String expected = "[ value=1]";
         assertEquals("A graph with only one node for the BFS ",expected,test.BreadthFirst(FirstNode));
     }
 
@@ -179,6 +179,60 @@ public class TestGraphs {
         test.Size();
         String expected = "[ value=A,  value=B,  value=D,  value=C,  value=E,  value=G]";
         assertEquals("A graph with BFS ",expected,test.BreadthFirst(FirstNode));
+    }
+
+
+
+    // DepthFirst tests
+
+    @Test
+    public void DepthFirstEmptyGraph() {
+        Graphs test = new Graphs();
+        Node Node = new Node(5);
+
+        test.Size();
+        String expected = "empty Graph..";
+        assertEquals("An empty graph with BFS ",expected,test.DepthFirst(Node));
+    }
+
+
+    @Test
+    public void DepthFirstOneNodeGraph() {
+        Graphs test = new Graphs();
+        Node FirstNode = test.AddNode("A");
+
+        test.Size();
+        String expected = "[ value=A]";
+        assertEquals("A graph with only one node for the BFS ",expected,test.DepthFirst(FirstNode));
+    }
+
+    @Test
+    public void DepthFirstGraph() {
+        Graphs test = new Graphs();
+
+        Node FirstNode = test.AddNode("A");
+        Node SecondNode = test.AddNode("B");
+        Node ThirdNode = test.AddNode("C");
+        Node fourthNode = test.AddNode("D");
+        Node fifthNode = test.AddNode("E");
+        Node sixthNode = test.AddNode("F");
+        Node SeventhNode = test.AddNode("h");
+        Node eighthNode = test.AddNode("G");
+
+        test.AddEdge(FirstNode, SecondNode, 0);
+        test.AddEdge(FirstNode, fourthNode, 5);
+        test.AddEdge(SecondNode,ThirdNode, 10);
+        test.AddEdge(SecondNode, fourthNode, 6);
+        test.AddEdge(ThirdNode,eighthNode , 9);
+        test.AddEdge(fourthNode,sixthNode , 5);
+        test.AddEdge(fourthNode,SeventhNode , 9);
+
+        test.AddEdge(fourthNode,fifthNode , 6);
+        test.AddEdge(sixthNode,SeventhNode , 9);
+
+        test.Size();
+        String expected = "[ value=A,  value=B,  value=D,  value=F,  value=h,  value=E,  value=C,  value=G]";
+        assertEquals("A graph with BFS ",expected,test.DepthFirst(FirstNode));
     }
 
 
