@@ -85,3 +85,38 @@ finally return the nodes lits --> in this case you will declare a variable of ty
 
 
 
+
+
+> # Depth first
+
+# Challenge Summary
+depth first preorder traversal on a graph
+
+## Whiteboard Process
+![](../assets/Dfs.jpg)
+
+## Approach & Efficiency
+
+This solution would take O(n) time , we will visit every nodes.
+the  Space  would take O(n) because of the stack.
+
+
+
+
+
+
+
+## Solution
+first you will check if the graph is empty or not using the size() method, if so return empty graph. 
+If not, you will declare a new stack -->`graphStack `
+and a new list --> visited 
+
+you will push the node that is passed with the DepthFirst  method to the stack and add it to visited list 
+
+then you will loop over the stack (as long as it is not empty)
+you will pop the node form the stack and store it in a node variable
+create a new list --> neighborsEdge and add to it the neighbor of that node. 
+loop over neighborsEdge and check if the nodes inside it are visited or not, if so --> continue. 
+
+If not add this node to the visited list and push it to the stack 
+finally return the visited  lits --> in this case you will declare a variable of type string and return the node list as a string 
