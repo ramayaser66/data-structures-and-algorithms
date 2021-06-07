@@ -24,7 +24,6 @@ public class Graphs {
 
     // AddEdge method
 
-
     public void AddEdge(Node firstNode, Node secondNode, int weight) {
 
 
@@ -61,8 +60,6 @@ public class Graphs {
 
     // GetNeighbors() method
 
-    // check using the getneighbors method if it has neighbors or not
-    // aka  check  if the check node has any neighbors return them
     public ArrayList<Edge> GetNeighbors(Node checkNeighborNode){
         if(checkNeighborNode.getNeighbors().size() == 0){
             return null;
