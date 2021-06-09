@@ -238,6 +238,167 @@ public class TestGraphs {
 
 
 
+    
+    // test getEdge
+
+    @Test
+    public void TestGetEdgeGraph() {
+        Graphs test = new Graphs();
+        GetEdge getEdgei = new GetEdge();
+
+        Node Pandora = test.AddNode("Pandora");
+        Node Metroville = test.AddNode("Metroville");
+        Node Arendelle = test.AddNode("Arendelle");
+        Node Monstropolis = test.AddNode("Monstropolis");
+        Node Narnia = test.AddNode("Narnia");
+        Node Naboo = test.AddNode("Naboo");
+
+
+        test.AddEdge(Pandora,Metroville,82);
+        test.AddEdge(Pandora,Arendelle,150);
+        test.AddEdge(Metroville,Arendelle,99);
+        test.AddEdge(Metroville,Narnia,37);
+        test.AddEdge(Metroville,Monstropolis,105);
+        test.AddEdge(Metroville,Naboo,26);
+        test.AddEdge(Arendelle,Monstropolis,42);
+        test.AddEdge(Monstropolis,Naboo,73);
+        test.AddEdge(Narnia,Naboo,250);
+
+        ArrayList<String> city = new ArrayList();
+
+        city.add("Pandora");
+        city.add("Metroville");
+
+
+
+        String expected = "true, $82";
+        assertEquals(" GetEdges for a graph  ",expected,getEdgei.getEdge( test,city));
+    }
+
+    @Test
+    public void TestGetEdgeGraph2() {
+        Graphs test = new Graphs();
+        GetEdge getEdgei = new GetEdge();
+
+        Node Pandora = test.AddNode("Pandora");
+        Node Metroville = test.AddNode("Metroville");
+        Node Arendelle = test.AddNode("Arendelle");
+        Node Monstropolis = test.AddNode("Monstropolis");
+        Node Narnia = test.AddNode("Narnia");
+        Node Naboo = test.AddNode("Naboo");
+
+
+        test.AddEdge(Pandora,Metroville,82);
+        test.AddEdge(Pandora,Arendelle,150);
+        test.AddEdge(Metroville,Arendelle,99);
+        test.AddEdge(Metroville,Narnia,37);
+        test.AddEdge(Metroville,Monstropolis,105);
+        test.AddEdge(Metroville,Naboo,26);
+        test.AddEdge(Arendelle,Monstropolis,42);
+        test.AddEdge(Monstropolis,Naboo,73);
+        test.AddEdge(Narnia,Naboo,250);
+
+        ArrayList<String> city = new ArrayList();
+        city.add("Arendelle");
+        city.add("Monstropolis");
+        city.add("Naboo");
+
+
+        String expected = "true, $115";
+        assertEquals("Testing GetEdges for a graph  ",expected,getEdgei.getEdge( test,city));
+    }
+
+
+
+    @Test
+    public void TestGetEdgeGraph3() {
+        Graphs test = new Graphs();
+        GetEdge getEdgei = new GetEdge();
+
+        Node Pandora = test.AddNode("Pandora");
+        Node Metroville = test.AddNode("Metroville");
+        Node Arendelle = test.AddNode("Arendelle");
+        Node Monstropolis = test.AddNode("Monstropolis");
+        Node Narnia = test.AddNode("Narnia");
+        Node Naboo = test.AddNode("Naboo");
+
+
+        test.AddEdge(Pandora,Metroville,82);
+        test.AddEdge(Pandora,Arendelle,150);
+        test.AddEdge(Metroville,Arendelle,99);
+        test.AddEdge(Metroville,Narnia,37);
+        test.AddEdge(Metroville,Monstropolis,105);
+        test.AddEdge(Metroville,Naboo,26);
+        test.AddEdge(Arendelle,Monstropolis,42);
+        test.AddEdge(Monstropolis,Naboo,73);
+        test.AddEdge(Narnia,Naboo,250);
+
+        ArrayList<String> city = new ArrayList();
+        city.add("Naboo");
+        city.add("Pandora");
+
+
+
+        String expected = "False, $0";
+        assertEquals("Testing GetEdges for a graph  ",expected,getEdgei.getEdge( test,city));
+    }
+
+
+    @Test
+    public void TestGetEdgeGraph4() {
+        Graphs test = new Graphs();
+        GetEdge getEdgei = new GetEdge();
+
+        Node Pandora = test.AddNode("Pandora");
+        Node Metroville = test.AddNode("Metroville");
+        Node Arendelle = test.AddNode("Arendelle");
+        Node Monstropolis = test.AddNode("Monstropolis");
+        Node Narnia = test.AddNode("Narnia");
+        Node Naboo = test.AddNode("Naboo");
+
+
+        test.AddEdge(Pandora,Metroville,82);
+        test.AddEdge(Pandora,Arendelle,150);
+        test.AddEdge(Metroville,Arendelle,99);
+        test.AddEdge(Metroville,Narnia,37);
+        test.AddEdge(Metroville,Monstropolis,105);
+        test.AddEdge(Metroville,Naboo,26);
+        test.AddEdge(Arendelle,Monstropolis,42);
+        test.AddEdge(Monstropolis,Naboo,73);
+        test.AddEdge(Narnia,Naboo,250);
+
+        ArrayList<String> city = new ArrayList();
+        city.add("Narnia");
+        city.add("Arendelle");
+        city.add("Naboo");
+
+
+        String expected = "False, $0";
+        assertEquals("Testing GetEdges for a graph  ",expected,getEdgei.getEdge( test,city));
+    }
+
+
+
+    @Test
+    public void TestGetEdgeGraph5() {
+        Graphs test = new Graphs();
+        GetEdge getEdgei = new GetEdge();
+
+
+
+        ArrayList<String> city = new ArrayList();
+        city.add("Narnia");
+        city.add("Arendelle");
+        city.add("Naboo");
+
+
+        String expected = "empty graph";
+        assertEquals("Testing GetEdges for a graph  ",expected,getEdgei.getEdge( test,city));
+    }
+
+
+
+
 
 
 
